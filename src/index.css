@@ -2506,7 +2506,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .btn-primary:hover {
@@ -2643,8 +2643,8 @@ fieldset:disabled a.btn {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
-  display:none;
   margin: 10px;
+  margin-bottom: 20px;
 }
 
 .btn-warning:hover {

@@ -41,7 +41,7 @@ function displayContact(){
                             <td>{values[row].lastName}</td>
                             <td>{values[row].email}</td>
                             <td>{values[row].number}</td>
-                            <td><button className="btn btn-warning" style={{display:"inline-block", verticalAlign: "top"}} onClick={()=>{showModal(); }}>Update</button>
+                            <td>
                                 <button className="btn btn-danger" style={{display:"inline-block", verticalAlign: "top"}} onClick={() => {DeleteData(values[row].id)}}>Delete</button>
                             </td>
                         </tr>

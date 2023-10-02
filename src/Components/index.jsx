@@ -9,7 +9,7 @@ function showModal() {
   
 }
 
-function showModalUpdate() {
+function showUpdateModal() {
   let ItemUpdate = document.getElementById("updatecontactmodal");
   let alertredUpdate = document.getElementById("alertdangerupdate");
   ItemUpdate.style.display = "block";
@@ -22,7 +22,8 @@ function index(){
     <div>
       <h1>Contact List</h1>
       <div className="text-center">
-        <button type="button" className="btn btn-primary" id="createcontact" onClick={()=>{showModal()}}>Create Contact</button>
+        <button type="button" className="btn btn-primary"  onClick={()=>{showModal()}}>Create Contact</button>
+        <button type="button" className="btn btn-warning" onClick={()=>{showUpdateModal()}}>Update Contact</button>
       </div>
       <DisplayContact/>
       <CreateModal/>
