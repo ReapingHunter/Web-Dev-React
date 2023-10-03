@@ -42,8 +42,8 @@ function updateModal(){
                     <div className="alert alert-danger" id="alertdangerupdate" role="alert">
                             Please enter the required inputs properly.
                     </div>
-                    <label htmlFor="exampleFormControlInput1">Enter ID:</label>
-                        <input type="text" name="id" placeholder="123" id="idupdate" className="form-control" value={id} onChange={(e)=>{setID(e.target.value)}} required></input><br />
+                    <label htmlFor="exampleFormControlInput1">Enter ID:</label> <br />
+                        <input type="number" name="id" placeholder="123" id="idupdate" value={id} onChange={(e)=>{setID(e.target.value)}} required></input><br />
                         <label htmlFor="exampleFormControlInput1">Enter First Name:</label>
                         <input type="text" name="firstname" placeholder="John" id="firstnameupdate" className="form-control" value={fname} onChange={(e)=>{setFname(e.target.value)}} required></input><br />
                         <label htmlFor="exampleFormControlInput1">Enter Last Name:</label>
