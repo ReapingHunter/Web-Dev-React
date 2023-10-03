@@ -1,5 +1,5 @@
 function deleteData(id){
-    fetch('http://192.168.191.12/ContactListBackendPHP/delete.php',{
+    fetch('http://localhost/ContactListBackendPHP/delete.php',{
             method: "POST",
             headers: new Headers({
                 "Content-Type": "application/x-www-form-urlencoded"
