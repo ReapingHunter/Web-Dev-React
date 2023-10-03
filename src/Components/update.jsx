@@ -1,6 +1,6 @@
 
 function editData(id, fname, lname, emailAdd, contactNum){
-    fetch('http://192.168.191.12/ContactListBackendPHP/edit.php',{
+    fetch('http://localhost/ContactListBackendPHP/edit.php',{
             method: "POST",
             headers: new Headers({
                 "Content-Type": "application/x-www-form-urlencoded"
