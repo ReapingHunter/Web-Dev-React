@@ -6,7 +6,6 @@ function deleteData(id){
             }),
             body: "id=" + id
     })
-    window.location.reload(false);
 }
 
 export default deleteData
