@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import DeleteData from "./deleteData.jsx"
 
-function displayContact(){
+function displayContact({operations:{displayUpdate,setUpdate}}){
     const [values, setValues] = useState({})
 
     useEffect(() => {
@@ -9,10 +9,13 @@ function displayContact(){
             .then(response=>response.json())
             .then(response => {
                 setValues(response.data)
-
             })
-            
     })
+
+    function updateClick(values){
+        setUpdate(values)
+        displayUpdate(true)
+    }
 
     return (
         <div>
@@ -32,12 +35,13 @@ function displayContact(){
                     return (
                         <tr key={row + "tr"}>
                             <th scope="row">{values[row].id}</th>
-                            <td>{values[row].lastName}</td>
                             <td>{values[row].firstName}</td>
+                            <td>{values[row].lastName}</td>
                             <td>{values[row].email}</td>
                             <td>{values[row].number}</td>
                             <td>
-                                <button className="btn btn-danger" style={{display:"inline-block", verticalAlign: "top"}} onClick={() => {DeleteData(values[row].id)}}>Delete</button>
+                                <button className="btn btn-warning" style={{display : "inline-block"}} onClick={()=>updateClick(values[row])}>Update</button>
+                                <button className="btn btn-danger" style={{display : "inline-block"}} onClick={() => {DeleteData(values[row].id)}}>Delete</button>
                             </td>
                         </tr>
                     )
